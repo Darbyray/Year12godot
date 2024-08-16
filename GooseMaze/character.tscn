@@ -1,8 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://dfcan4skkjnj8"]
+[gd_scene load_steps=22 format=3 uid="uid://dfcan4skkjnj8"]
 
 [ext_resource type="Script" path="res://addons/fpc/character.gd" id="1_rrd3a"]
 [ext_resource type="Script" path="res://addons/fpc/debug.gd" id="2_rw6ll"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_8ge30"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pk4ho"]
+albedo_color = Color(0.957733, 0.33948, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
 albedo_color = Color(0.909804, 0.596078, 0, 1)
@@ -358,6 +361,7 @@ default_reticle = "res://addons/fpc/reticles/reticle_1.tscn"
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_pk4ho")
 mesh = SubResource("CapsuleMesh_jw1de")
 
 [node name="Collision" type="CollisionShape3D" parent="."]
