@@ -1,8 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://dfcan4skkjnj8"]
+[gd_scene load_steps=25 format=3 uid="uid://dfcan4skkjnj8"]
 
 [ext_resource type="Script" path="res://addons/fpc/character.gd" id="1_rrd3a"]
+[ext_resource type="PackedScene" uid="uid://erlkruio8bei" path="res://flashy.glb" id="2_41ewo"]
 [ext_resource type="Script" path="res://addons/fpc/debug.gd" id="2_rw6ll"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_8ge30"]
+[ext_resource type="Texture2D" uid="uid://pe7a4weirj2g" path="res://textures/dark.png" id="3_k8km4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pk4ho"]
 albedo_color = Color(0.957733, 0.33948, 0, 1)
@@ -150,6 +152,14 @@ _data = {
 "RESET": SubResource("Animation_j8cx7"),
 "crouch": SubResource("Animation_5ec5e")
 }
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqxy3"]
+albedo_texture = ExtResource("3_k8km4")
+metallic = 0.81
+metallic_specular = 0.2
+roughness = 0.5
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.000850145
 
 [sub_resource type="Animation" id="Animation_gh776"]
 resource_name = "RESET"
@@ -354,10 +364,16 @@ MarginContainer/constants/margin_top = 10
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_k4wwl"]
 
-[node name="Character" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1578, 0)
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1578, 0.253197)
 script = ExtResource("1_rrd3a")
 default_reticle = "res://addons/fpc/reticles/reticle_1.tscn"
+HEAD = NodePath("Head")
+CAMERA = NodePath("Head/Camera")
+HEADBOB_ANIMATION = NodePath("Head/HeadbobAnimation")
+JUMP_ANIMATION = NodePath("Head/JumpAnimation")
+CROUCH_ANIMATION = NodePath("CrouchAnimation")
+COLLISION_MESH = NodePath("Collision")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -377,6 +393,29 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera" type="Camera3D" parent="Head"]
+
+[node name="CSGBox3D216" type="CSGBox3D" parent="Head/Camera"]
+physics_interpolation_mode = 2
+transform = Transform3D(1, 2.744e-07, -3.74998e-08, 2.68063e-07, -0.993022, -0.117935, -6.9601e-08, 0.117935, -0.993022, 0.4327, -0.380461, -0.496527)
+use_collision = true
+size = Vector3(0.152365, 0.152878, 0.407925)
+material = SubResource("StandardMaterial3D_sqxy3")
+
+[node name="CSGBox3D217" type="CSGBox3D" parent="Head/Camera"]
+physics_interpolation_mode = 2
+transform = Transform3D(1, 1.5171e-07, 8.74199e-08, 4.6556e-08, 0.25092, -0.968008, -1.68792e-07, 0.968008, 0.25092, 0.442931, -0.321682, -0.252852)
+use_collision = true
+size = Vector3(0.152365, 0.450378, 0.121066)
+material = SubResource("StandardMaterial3D_sqxy3")
+
+[node name="flashy" parent="Head/Camera" instance=ExtResource("2_41ewo")]
+transform = Transform3D(-5.90104e-09, 0, -0.135, 0, 0.135, 0, 0.135, 0, -5.90104e-09, 0.455811, -0.364412, -1.04234)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.464281, -0.368577, -1.29526)
+light_energy = 60.0
+spot_range = 25.258
+spot_angle = 28.5805
 
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="Head"]
 libraries = {
