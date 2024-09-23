@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://4yi0pwiifc4p"]
+[gd_scene load_steps=21 format=3 uid="uid://4yi0pwiifc4p"]
 
 [ext_resource type="Texture2D" uid="uid://pe7a4weirj2g" path="res://textures/dark.png" id="2_08fdt"]
+[ext_resource type="Texture2D" uid="uid://65ftgr8jv68" path="res://black.png" id="2_lr53r"]
 [ext_resource type="Texture2D" uid="uid://cxjxvqmf4boxq" path="res://textures/green.png" id="3_q4clv"]
 [ext_resource type="Texture2D" uid="uid://dsv4jm4vydflb" path="res://textures/orange.png" id="4_1ns5t"]
 [ext_resource type="PackedScene" uid="uid://dfcan4skkjnj8" path="res://character.tscn" id="4_1qhaw"]
@@ -25,6 +26,9 @@ roughness = 0.5
 uv1_triplanar = true
 uv1_triplanar_sharpness = 0.000850145
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxjhc"]
+albedo_texture = ExtResource("2_lr53r")
+
 [sub_resource type="Gradient" id="Gradient_ur0vy"]
 colors = PackedColorArray(0, 0.476245, 0.0193456, 1, 0.360494, 0.612721, 0.119744, 1)
 
@@ -44,6 +48,9 @@ albedo_texture = SubResource("NoiseTexture2D_7akuf")
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7a8s"]
+albedo_texture = ExtResource("2_lr53r")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0sbk"]
 albedo_texture = ExtResource("3_q4clv")
 metallic = 0.81
@@ -59,6 +66,15 @@ metallic_specular = 0.2
 roughness = 0.5
 uv1_triplanar = true
 uv1_triplanar_sharpness = 0.000850145
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yv42a"]
+albedo_texture = ExtResource("2_lr53r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yw5dx"]
+albedo_texture = ExtResource("2_lr53r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5dyj"]
+albedo_texture = ExtResource("2_lr53r")
 
 [node name="World" type="Node3D"]
 transform = Transform3D(1.00936, 0, 0, 0, 1.00936, 0, 0, 0, 1.00936, 0, 0, 0)
@@ -108,6 +124,7 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.6186, 14.6182, 38.4571)
+material_override = SubResource("StandardMaterial3D_rxjhc")
 use_collision = true
 size = Vector3(388.025, 8, 469.714)
 material = SubResource("StandardMaterial3D_gomnb")
@@ -144,6 +161,7 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.7368, -4.11512, 125.404)
+material_override = SubResource("StandardMaterial3D_y7a8s")
 use_collision = true
 size = Vector3(570.131, 5.62451, 260.715)
 material = SubResource("StandardMaterial3D_gomnb")
@@ -360,12 +378,14 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D48" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -153.27, -2.66877, -114.577)
+material_override = SubResource("StandardMaterial3D_yv42a")
 use_collision = true
 size = Vector3(364.24, 2.73181, 220.172)
 material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D49" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.869, -4.11512, -127.567)
+material_override = SubResource("StandardMaterial3D_yw5dx")
 use_collision = true
 size = Vector3(224.297, 5.62451, 194.681)
 material = SubResource("StandardMaterial3D_gomnb")
@@ -666,6 +686,7 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D100" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.5322, -20.4062, -0.64843)
+material_override = SubResource("StandardMaterial3D_h5dyj")
 use_collision = true
 size = Vector3(226.838, 6.45923, 164.115)
 material = SubResource("StandardMaterial3D_gomnb")
