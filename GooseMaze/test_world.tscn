@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://4yi0pwiifc4p"]
+[gd_scene load_steps=23 format=3 uid="uid://4yi0pwiifc4p"]
 
 [ext_resource type="Texture2D" uid="uid://pe7a4weirj2g" path="res://textures/dark.png" id="2_08fdt"]
 [ext_resource type="Texture2D" uid="uid://65ftgr8jv68" path="res://black.png" id="2_lr53r"]
@@ -67,13 +67,19 @@ roughness = 0.5
 uv1_triplanar = true
 uv1_triplanar_sharpness = 0.000850145
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yv42a"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bn64"]
 albedo_texture = ExtResource("2_lr53r")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yw5dx"]
 albedo_texture = ExtResource("2_lr53r")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5dyj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shuab"]
+albedo_texture = ExtResource("2_lr53r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryqcl"]
+albedo_texture = ExtResource("2_lr53r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26arg"]
 albedo_texture = ExtResource("2_lr53r")
 
 [node name="World" type="Node3D"]
@@ -378,7 +384,7 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D48" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -153.27, -2.66877, -114.577)
-material_override = SubResource("StandardMaterial3D_yv42a")
+material_override = SubResource("StandardMaterial3D_4bn64")
 use_collision = true
 size = Vector3(364.24, 2.73181, 220.172)
 material = SubResource("StandardMaterial3D_gomnb")
@@ -686,7 +692,7 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D100" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.5322, -20.4062, -0.64843)
-material_override = SubResource("StandardMaterial3D_h5dyj")
+material_override = SubResource("StandardMaterial3D_shuab")
 use_collision = true
 size = Vector3(226.838, 6.45923, 164.115)
 material = SubResource("StandardMaterial3D_gomnb")
@@ -1347,6 +1353,7 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D212" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 1.5171e-07, 8.74199e-08, 1.50991e-07, -0.999967, 0.00816838, 8.86562e-08, -0.00816838, -0.999967, 334.68, 8.73542, -16.4552)
+material_override = SubResource("StandardMaterial3D_ryqcl")
 use_collision = true
 size = Vector3(345.215, 3.2207, 311.432)
 material = SubResource("StandardMaterial3D_gomnb")
@@ -1731,6 +1738,7 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D277" type="CSGBox3D" parent="world"]
 transform = Transform3D(-7.67313e-08, 0.00816838, 0.999967, 1.50991e-07, -0.999967, 0.00816838, 1, 1.51612e-07, 7.54954e-08, 362.899, 33.0951, -21.9055)
+material_override = SubResource("StandardMaterial3D_26arg")
 use_collision = true
 size = Vector3(298.85, 10.4345, 356.534)
 material = SubResource("StandardMaterial3D_gomnb")

@@ -68,7 +68,7 @@ environment = SubResource("Environment_20rw3")
 
 [node name="sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.87959, -0.436605, 0.188936, 0, 0.397148, 0.917755, -0.475732, -0.807248, 0.349328, 0, 0, 0)
-light_energy = 2.0
+light_energy = 0.2
 shadow_enabled = true
 
 [node name="terrain" type="Node3D" parent="."]
@@ -2005,6 +2005,12 @@ text = "Load game"
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Quit Game"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.0235488, 0, 0.990447, 0, 0.990727, 0, -0.990447, 0, 0.0235488, 4.05067, -0.368577, -4.79607)
+light_energy = 60.0
+spot_range = 39.4818
+spot_angle = 28.5805
 
 [connection signal="pressed" from="Camera3D/VBoxContainer/Newgamebutton" to="Camera3D/VBoxContainer" method="_on_newgamebutton_pressed"]
 [connection signal="pressed" from="Camera3D/VBoxContainer/Quitgamebutton" to="Camera3D/VBoxContainer" method="_on_quitgamebutton_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://dfcan4skkjnj8"]
+[gd_scene load_steps=28 format=3 uid="uid://dfcan4skkjnj8"]
 
 [ext_resource type="Script" path="res://addons/fpc/character.gd" id="1_rrd3a"]
 [ext_resource type="PackedScene" uid="uid://erlkruio8bei" path="res://flashy.glb" id="2_41ewo"]
+[ext_resource type="Texture2D" uid="uid://65ftgr8jv68" path="res://black.png" id="2_51818"]
 [ext_resource type="Script" path="res://addons/fpc/debug.gd" id="2_rw6ll"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_8ge30"]
 [ext_resource type="Texture2D" uid="uid://pe7a4weirj2g" path="res://textures/dark.png" id="3_k8km4"]
@@ -9,13 +10,13 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pk4ho"]
 albedo_color = Color(0.957733, 0.33948, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xx4a7"]
 albedo_color = Color(0.909804, 0.596078, 0, 1)
 clearcoat_enabled = true
 clearcoat_roughness = 0.2
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jw1de"]
-material = SubResource("StandardMaterial3D_kp17n")
+material = SubResource("StandardMaterial3D_xx4a7")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uy03j"]
 
@@ -153,6 +154,9 @@ _data = {
 "crouch": SubResource("Animation_5ec5e")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xlxe"]
+albedo_texture = ExtResource("2_51818")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqxy3"]
 albedo_texture = ExtResource("3_k8km4")
 metallic = 1.0
@@ -160,6 +164,9 @@ metallic_specular = 1.0
 roughness = 0.5
 uv1_triplanar = true
 uv1_triplanar_sharpness = 0.000850145
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5usj"]
+albedo_texture = ExtResource("2_51818")
 
 [sub_resource type="Animation" id="Animation_gh776"]
 resource_name = "RESET"
@@ -397,12 +404,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="CSGBox3D216" type="CSGBox3D" parent="Head/Camera"]
 physics_interpolation_mode = 2
 transform = Transform3D(1, 2.744e-07, -3.74998e-08, 2.68063e-07, -0.993022, -0.117935, -6.9601e-08, 0.117935, -0.993022, 0.435362, -0.380461, -0.498966)
+material_override = SubResource("StandardMaterial3D_1xlxe")
 size = Vector3(0.152365, 0.152878, 0.407925)
 material = SubResource("StandardMaterial3D_sqxy3")
 
 [node name="CSGBox3D217" type="CSGBox3D" parent="Head/Camera"]
 physics_interpolation_mode = 2
 transform = Transform3D(1, 1.5171e-07, 8.74199e-08, 4.6556e-08, 0.25092, -0.968008, -1.68792e-07, 0.968008, 0.25092, 0.442931, -0.321682, -0.252852)
+material_override = SubResource("StandardMaterial3D_n5usj")
 size = Vector3(0.152365, 0.450378, 0.121066)
 material = SubResource("StandardMaterial3D_sqxy3")
 
