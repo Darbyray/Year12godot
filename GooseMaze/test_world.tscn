@@ -1,10 +1,16 @@
-[gd_scene load_steps=23 format=3 uid="uid://4yi0pwiifc4p"]
+[gd_scene load_steps=29 format=3 uid="uid://4yi0pwiifc4p"]
 
 [ext_resource type="Texture2D" uid="uid://pe7a4weirj2g" path="res://textures/dark.png" id="2_08fdt"]
 [ext_resource type="Texture2D" uid="uid://65ftgr8jv68" path="res://black.png" id="2_lr53r"]
 [ext_resource type="Texture2D" uid="uid://cxjxvqmf4boxq" path="res://textures/green.png" id="3_q4clv"]
 [ext_resource type="Texture2D" uid="uid://dsv4jm4vydflb" path="res://textures/orange.png" id="4_1ns5t"]
 [ext_resource type="PackedScene" uid="uid://dfcan4skkjnj8" path="res://character.tscn" id="4_1qhaw"]
+[ext_resource type="Texture2D" uid="uid://c8bci401emibs" path="res://textures/note1.jpg" id="6_2e5ku"]
+[ext_resource type="Texture2D" uid="uid://kc4hln2guxq1" path="res://textures/note2.jpg" id="7_o30jx"]
+[ext_resource type="Texture2D" uid="uid://c41tn1x0k77bh" path="res://textures/note3.jpg" id="8_toygm"]
+[ext_resource type="Texture2D" uid="uid://ue8i0xmjxtcf" path="res://textures/trollnote.jpg" id="9_iddqr"]
+[ext_resource type="Texture2D" uid="uid://bc4i6rmc8rna8" path="res://textures/note4.jpg" id="10_x31ul"]
+[ext_resource type="Texture2D" uid="uid://pb0vn26oe6jl" path="res://textures/finalnote.jpg" id="11_d0uk3"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_edcox"]
 ground_color = Color(0.160784, 0.815686, 0.905882, 1)
@@ -834,12 +840,6 @@ transform = Transform3D(4.37079e-08, -0.99992, 0.0126532, -1, -4.37114e-08, -1.6
 use_collision = true
 size = Vector3(12, 3.2207, 33.712)
 material = SubResource("StandardMaterial3D_gomnb")
-
-[node name="CSGBox3D124" type="CSGBox3D" parent="world"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.4268, 1.6314, -12.2551)
-use_collision = true
-size = Vector3(4.70007, 3.60676, 4.52081)
-material = SubResource("StandardMaterial3D_67ysu")
 
 [node name="CSGBox3D125" type="CSGBox3D" parent="world"]
 transform = Transform3D(-4.3689e-08, 0.999489, 0.031969, -1, -4.37114e-08, 3.44924e-15, 1.39741e-09, -0.031969, 0.999489, -6.97419, 4.61246, -97.841)
@@ -1875,12 +1875,6 @@ use_collision = true
 size = Vector3(42.6114, 5.26733, 14)
 material = SubResource("StandardMaterial3D_gomnb")
 
-[node name="CSGBox3D78" type="CSGBox3D" parent="world"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4063, -11.3398, 36.1337)
-use_collision = true
-size = Vector3(9.60278, 8, 9.27686)
-material = SubResource("StandardMaterial3D_7j4uu")
-
 [node name="CSGBox3D128" type="CSGBox3D" parent="world"]
 transform = Transform3D(-3.51e-08, 0.802994, -0.595987, -1, -4.37114e-08, 2.39897e-14, -2.60514e-08, 0.595987, 0.802994, 29.0868, 8.20789, 114.317)
 use_collision = true
@@ -2005,3 +1999,27 @@ material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="Character2" parent="." instance=ExtResource("4_1qhaw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.63854, 0.113207, 0.784867)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, -13.1264, 0.925705, 1.53508)
+texture = ExtResource("6_2e5ku")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 41.1451, -1.80604, -26.2224)
+texture = ExtResource("7_o30jx")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(-0.25, 0, 3.7749e-08, 0, 0.25, 0, -3.7749e-08, 0, -0.25, 15.6214, -15.0174, 79.672)
+texture = ExtResource("8_toygm")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(-0.25, 0, 3.7749e-08, 0, 0.25, 0, -3.7749e-08, 0, -0.25, 139.378, 11.0855, -32.2582)
+texture = ExtResource("9_iddqr")
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(-1.09278e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.09278e-08, 397.944, 12.7378, -63.1734)
+texture = ExtResource("10_x31ul")
+
+[node name="Sprite3D6" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 500.375, 12.1753, 89.2551)
+texture = ExtResource("11_d0uk3")

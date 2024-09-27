@@ -807,12 +807,6 @@ use_collision = true
 size = Vector3(12, 3.2207, 33.712)
 material = SubResource("StandardMaterial3D_gomnb")
 
-[node name="CSGBox3D124" type="CSGBox3D" parent="cyclops"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.4268, 1.6314, -12.2551)
-use_collision = true
-size = Vector3(4.70007, 3.60676, 4.52081)
-material = SubResource("StandardMaterial3D_67ysu")
-
 [node name="CSGBox3D125" type="CSGBox3D" parent="cyclops"]
 transform = Transform3D(-4.3689e-08, 0.99949, 0.031969, -1, -4.37114e-08, 1.50266e-15, 1.39741e-09, -0.031969, 0.99949, -6.97419, 4.61246, -97.841)
 use_collision = true
@@ -1306,9 +1300,9 @@ size = Vector3(12, 3.2207, 33.795)
 material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D209" type="CSGBox3D" parent="cyclops"]
-transform = Transform3D(4.37099e-08, -0.999966, 0.00816837, -0.999996, -4.37112e-08, -1.57297e-15, 3.57047e-10, -0.00816837, -0.999966, 161.291, 4.57045, -39.743)
+transform = Transform3D(4.37099e-08, -0.999966, 0.00816837, -0.999996, -4.37112e-08, -1.57297e-15, 3.57047e-10, -0.00816837, -0.999966, 161.291, 4.53261, -39.743)
 use_collision = true
-size = Vector3(11.916, 3.2207, 17.5651)
+size = Vector3(11.8403, 3.2207, 17.5651)
 material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D210" type="CSGBox3D" parent="cyclops"]
@@ -1324,9 +1318,9 @@ size = Vector3(24.1982, 3.2207, 15.0696)
 material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D212" type="CSGBox3D" parent="cyclops"]
-transform = Transform3D(0.999996, 8.74211e-08, -3.57049e-10, 8.74211e-08, -0.999966, 0.00816837, 3.57047e-10, -0.00816837, -0.999966, 334.68, 8.73542, -16.4552)
+transform = Transform3D(0.999996, 8.74211e-08, -3.57049e-10, 8.74211e-08, -0.999966, 0.00816837, 3.57047e-10, -0.00816837, -0.999966, 333.602, 8.73542, -16.4552)
 use_collision = true
-size = Vector3(345.215, 3.2207, 311.432)
+size = Vector3(347.371, 3.2207, 311.432)
 material = SubResource("StandardMaterial3D_gomnb")
 
 [node name="CSGBox3D213" type="CSGBox3D" parent="cyclops"]
