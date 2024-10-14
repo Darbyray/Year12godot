@@ -13,7 +13,7 @@ extends CharacterBody3D
 @export var base_speed : float = 10
 @export var sprint_speed : float = 15
 @export var crouch_speed : float = 1.0
-
+#note ive changed the character movment speed to a more suitable speed for the naviagtion of the game
 @export var acceleration : float = 2
 @export var jump_velocity : float = 6
 @export var mouse_sensitivity : float = 0.2
