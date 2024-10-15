@@ -1990,11 +1990,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "New Game"
 
-[node name="Loadgamebutton" type="Button" parent="Camera3D/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Load game"
-
 [node name="Quitgamebutton" type="Button" parent="Camera3D/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
